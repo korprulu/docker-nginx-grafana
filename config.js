@@ -25,6 +25,12 @@ function (Settings) {
         username: 'clearwatch',
         password: 'NrYFC8v9Sh',
       },
+      accesslog: {
+        type: 'influxdb',
+        url: "http://130.211.246.218:8086/db/accesslog",
+        username: 'clearwatch',
+        password: 'NrYFC8v9Sh',
+      },
       grafana: {
         type: 'influxdb',
         url: "http://130.211.246.218:8086/db/grafana",
