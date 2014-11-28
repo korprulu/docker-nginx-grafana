@@ -21,13 +21,13 @@ function (Settings) {
     datasources: {
       netflow: {
         type: 'influxdb',
-        url: "http://107.167.182.198:8086/db/netflow",
+        url: "http://130.211.246.218:8086/db/netflow",
         username: 'clearwatch',
         password: 'NrYFC8v9Sh',
       },
       grafana: {
         type: 'influxdb',
-        url: "http://107.167.182.198:8086/db/grafana",
+        url: "http://130.211.246.218:8086/db/grafana",
         username: 'grafana',
         password: '9sQPmDTCux',
         grafanaDB: true
