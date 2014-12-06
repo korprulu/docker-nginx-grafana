@@ -4,7 +4,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install curl nginx -y
 
-ENV GRAFANA_VERSION 1.8.1
+ENV GRAFANA_VERSION 1.9.0
 ADD grafana_site /etc/nginx/sites-enabled/grafana
 
 # Remove default site
@@ -17,7 +17,8 @@ RUN curl -s -o /tmp/grafana.tar.gz http://grafanarel.s3.amazonaws.com/grafana-${
     rm /tmp/grafana.tar.gz
 
 # Grafana config file
-ADD config.js /grafana/config.js
+# ADD config.js /grafana/config.js
+RUN ln -s /data/grafana_config.js /grafana/config.js
 
 # Auth basic
 ADD htpasswd /.htpasswd
